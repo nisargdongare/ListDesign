@@ -2,15 +2,18 @@
     "transactions": [
         {
             "name": "Tuition Fees",
-            "status": "completed",
-            "category": "education",
-            "carbon_footprint": 25,
-            "fees": 0,
-            "type": "card",
             "amount": 2195,
             "currency": "GBP",
             "created_at": "2021-04-22 02:15",
             "icon": "https://novus-app-styleguide.s3.eu-west-1.amazonaws.com/banking_icons/education_small.svg",
+            "carbon_footprint": 25,
+
+            "status": "completed",
+            "category": "education",
+            "fees": 0,
+            "type": "card",
+            
+            
             "brand_partner": "FALSE"
         },
         {
