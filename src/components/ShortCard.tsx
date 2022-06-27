@@ -5,13 +5,22 @@ import { primayColor } from '../styleList';
 type StatusProp = {
     name: String,
     amount: number,
+    currency:String,
+    time :String,
+    date: String
+
 }
 
 function ShortCard(props: StatusProp) {
     return (
         <View style={styles.Container}>
             <View style={styles.LeftContainer}>
-                <Text style={styles.BrightText1} >{props.amount}</Text>
+                <View style = {{height:'50%', display: 'flex', flexDirection:'row', justifyContent:'center', alignItems:'center'}}>
+                    <Text style={styles.BrightText1} >{props.currency}</Text>
+                    <Text style={styles.BrightText1} >{props.amount}</Text>
+                </View>
+                <Text style={styles.BrightText2} >{props.time}</Text>
+                <Text style={styles.BrightText3} >{props.date}</Text>
             </View>
             <View style={styles.RightContainer}></View>
 
@@ -42,6 +51,9 @@ const styles = StyleSheet.create({
         shadowOpacity: 1.0,
         shadowOffset: { width: 20, height: 20 },
         elevation: 3,
+        display:'flex',
+        justifyContent:'center',
+        alignItems:'center'
 
     },
     RightContainer: {
@@ -59,6 +71,16 @@ const styles = StyleSheet.create({
     BrightText1: {
         color: 'white',
         fontWeight: 'bold',
+        fontSize: 20,
+    },
+    BrightText2: {
+        color: 'white',
+        fontWeight: 'bold',
         fontSize: 10,
+    },
+    BrightText3: {
+        color: 'white',
+        fontWeight: 'bold',
+        fontSize: 12,
     }
 });
