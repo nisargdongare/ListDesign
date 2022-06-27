@@ -105,7 +105,6 @@ const styles = StyleSheet.create({
         justifyContent: 'center'
     },
     iconContainer: {
-        backgroundColor: primayColor,
         height: 100,
         width: 60,
         // borderRadius: 30,

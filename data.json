@@ -102,7 +102,7 @@
             "amount": 15,
             "currency": "GBP",
             "created_at": "2020-01-21 08:58",
-            "icon": "https://novus-app-styleguide.s3.eu-west-1.amazonaws.com/banking_icons/culture_small.svg",
+            "icon": "https://raw.githubusercontent.com/nisargdongare/ListDesign/main/src/logo/logo1.svg",
             "brand_partner": "FALSE"
         },
         {
@@ -115,7 +115,7 @@
             "amount": 15,
             "currency": "GBP",
             "created_at": "2021-05-19 14:56",
-            "icon": "https://novus-app-styleguide.s3.eu-west-1.amazonaws.com/banking_icons/culture_small.svg",
+            "icon": "https://raw.githubusercontent.com/nisargdongare/ListDesign/main/src/logo/logo2.svg",
             "brand_partner": "FALSE"
         },
         {
@@ -128,7 +128,7 @@
             "amount": 15,
             "currency": "GBP",
             "created_at": "2021-03-27 01:32",
-            "icon": "https://novus-app-styleguide.s3.eu-west-1.amazonaws.com/banking_icons/fashion_small.svg",
+            "icon": "https://raw.githubusercontent.com/nisargdongare/ListDesign/main/src/logo/logo3.svg",
             "brand_partner": "FALSE"
         },
         {
@@ -141,7 +141,7 @@
             "amount": 15,
             "currency": "GBP",
             "created_at": "2020-04-10 18:09",
-            "icon": "https://novus-app-styleguide.s3.eu-west-1.amazonaws.com/banking_icons/culture_small.svg",
+            "icon": "https://raw.githubusercontent.com/nisargdongare/ListDesign/main/src/logo/logo4.svg",
             "brand_partner": "FALSE"
         },
         {
@@ -154,7 +154,7 @@
             "amount": 15,
             "currency": "GBP",
             "created_at": "2021-03-11 06:17",
-            "icon": "https://novus-app-styleguide.s3.eu-west-1.amazonaws.com/banking_icons/fashion_small.svg",
+            "icon": "https://raw.githubusercontent.com/nisargdongare/ListDesign/main/src/logo/logo5.svg",
             "brand_partner": "FALSE"
         },
         {
@@ -167,7 +167,7 @@
             "amount": 30,
             "currency": "GBP",
             "created_at": "2021-02-07 04:46",
-            "icon": "https://novus-app-styleguide.s3.eu-west-1.amazonaws.com/banking_icons/transport_small.svg",
+            "icon": "https://raw.githubusercontent.com/nisargdongare/ListDesign/main/src/logo/logo6.svg",
             "brand_partner": "FALSE"
         },
         {
@@ -180,7 +180,7 @@
             "amount": 20,
             "currency": "GBP",
             "created_at": "2020-01-31 06:18",
-            "icon": "https://novus-app-styleguide.s3.eu-west-1.amazonaws.com/banking_icons/transport_small.svg",
+            "icon": "https://raw.githubusercontent.com/nisargdongare/ListDesign/main/src/logo/logo7.svg",
             "brand_partner": "FALSE"
         },
         {
@@ -193,7 +193,7 @@
             "amount": 20,
             "currency": "GBP",
             "created_at": "2020-07-28 19:20",
-            "icon": "https://novus-app-styleguide.s3.eu-west-1.amazonaws.com/banking_icons/transport_small.svg",
+            "icon": "https://raw.githubusercontent.com/nisargdongare/ListDesign/main/src/logo/logo1.svg",
             "brand_partner": "FALSE"
         },
         {
@@ -206,7 +206,7 @@
             "amount": 20,
             "currency": "GBP",
             "created_at": "2020-06-07 01:22",
-            "icon": "https://novus-app-styleguide.s3.eu-west-1.amazonaws.com/banking_icons/transport_small.svg",
+            "icon": "https://raw.githubusercontent.com/nisargdongare/ListDesign/main/src/logo/logo2.svg",
             "brand_partner": "FALSE"
         },
         {
@@ -219,7 +219,7 @@
             "amount": 20,
             "currency": "GBP",
             "created_at": "2021-05-07 00:49",
-            "icon": "https://novus-app-styleguide.s3.eu-west-1.amazonaws.com/banking_icons/transport_small.svg",
+            "icon": "https://raw.githubusercontent.com/nisargdongare/ListDesign/main/src/logo/logo3.svg",
             "brand_partner": "FALSE"
         },
         {
@@ -232,7 +232,7 @@
             "amount": 20,
             "currency": "GBP",
             "created_at": "2020-10-03 16:49",
-            "icon": "https://novus-app-styleguide.s3.eu-west-1.amazonaws.com/banking_icons/transport_small.svg",
+            "icon": "https://raw.githubusercontent.com/nisargdongare/ListDesign/main/src/logo/logo4.svg",
             "brand_partner": "FALSE"
         },
         {
@@ -245,7 +245,7 @@
             "amount": 20,
             "currency": "GBP",
             "created_at": "2020-11-05 10:23",
-            "icon": "https://novus-app-styleguide.s3.eu-west-1.amazonaws.com/banking_icons/transport_small.svg",
+            "icon": "https://raw.githubusercontent.com/nisargdongare/ListDesign/main/src/logo/logo5.svg",
             "brand_partner": "FALSE"
         },
         {
@@ -258,7 +258,7 @@
             "amount": 56.4,
             "currency": "GBP",
             "created_at": "2021-05-19 11:49",
-            "icon": "https://nap-52-testbucket.s3.eu-west-1.amazonaws.com/plantfaced/plantfaced_logo.png",
+            "icon": "https://raw.githubusercontent.com/nisargdongare/ListDesign/main/src/logo/logo6.svg",
             "brand_partner": "TRUE"
         },
         {
@@ -271,7 +271,7 @@
             "amount": 125,
             "currency": "GBP",
             "created_at": "2021-06-14 02:27",
-            "icon": "https://nap-52-testbucket.s3.eu-west-1.amazonaws.com/positive_news/positive_news_logo.png",
+            "icon": "https://raw.githubusercontent.com/nisargdongare/ListDesign/main/src/logo/logo7.svg",
             "brand_partner": "TRUE"
         },
         {
@@ -284,7 +284,7 @@
             "amount": 20,
             "currency": "GBP",
             "created_at": "2021-05-29 11:55",
-            "icon": "https://nap-52-testbucket.s3.eu-west-1.amazonaws.com/smol/smol_logo.png",
+            "icon": "https://raw.githubusercontent.com/nisargdongare/ListDesign/main/src/logo/logo1.svg",
             "brand_partner": "TRUE"
         },
         {
@@ -297,7 +297,7 @@
             "amount": 89.9,
             "currency": "GBP",
             "created_at": "2020-06-20 00:21",
-            "icon": "https://nap-52-testbucket.s3.eu-west-1.amazonaws.com/edward_mongzar/edward_mongzar_logo.png",
+            "icon": "https://raw.githubusercontent.com/nisargdongare/ListDesign/main/src/logo/logo2.svg",
             "brand_partner": "TRUE"
         },
         {
@@ -310,7 +310,7 @@
             "amount": 240,
             "currency": "GBP",
             "created_at": "2021-06-07 17:32",
-            "icon": "https://nap-52-testbucket.s3.eu-west-1.amazonaws.com/beyond_retro/beyond_retro_logo.png",
+            "icon":"https://raw.githubusercontent.com/nisargdongare/ListDesign/main/src/logo/logo3.svg",
             "brand_partner": "TRUE"
         },
         {
@@ -323,7 +323,7 @@
             "amount": 500,
             "currency": "GBP",
             "created_at": "2020-06-21 13:37",
-            "icon": "https://nap-52-testbucket.s3.eu-west-1.amazonaws.com/valentina_karellas/valentina_karellas_logo.png",
+            "icon": "https://raw.githubusercontent.com/nisargdongare/ListDesign/main/src/logo/logo4.svg",
             "brand_partner": "TRUE"
         },
         {
@@ -336,7 +336,7 @@
             "amount": 90,
             "currency": "GBP",
             "created_at": "2021-06-17 22:42",
-            "icon": "https://nap-52-testbucket.s3.eu-west-1.amazonaws.com/dressarte/dressarte_logo.png",
+            "icon": "https://raw.githubusercontent.com/nisargdongare/ListDesign/main/src/logo/logo5.svg",
             "brand_partner": "TRUE"
         },
         {
@@ -349,7 +349,7 @@
             "amount": 75,
             "currency": "GBP",
             "created_at": "2021-06-06 04:27",
-            "icon": "https://nap-52-testbucket.s3.eu-west-1.amazonaws.com/birdsong/bird_song_logo.png",
+            "icon": "https://raw.githubusercontent.com/nisargdongare/ListDesign/main/src/logo/logo6.svg",
             "brand_partner": "TRUE"
         },
         {
@@ -362,7 +362,7 @@
             "amount": 6,
             "currency": "GBP",
             "created_at": "2021-06-21 04:28",
-            "icon": "https://nap-52-testbucket.s3.eu-west-1.amazonaws.com/second_shot/second_shot_logo.png",
+            "icon": "https://raw.githubusercontent.com/nisargdongare/ListDesign/main/src/logo/logo7.svg",
             "brand_partner": "TRUE"
         },
         {
@@ -375,7 +375,7 @@
             "amount": 40,
             "currency": "GBP",
             "created_at": "2021-05-30 21:58",
-            "icon": "https://nap-52-testbucket.s3.eu-west-1.amazonaws.com/ingmarson/ingmarson_logo.png",
+            "icon": "https://raw.githubusercontent.com/nisargdongare/ListDesign/main/src/logo/logo1.svg",
             "brand_partner": "TRUE"
         },
         {
@@ -388,7 +388,7 @@
             "amount": 457.33,
             "currency": "GBP",
             "created_at": "2020-05-01 15:34",
-            "icon": "https://nap-52-testbucket.s3.eu-west-1.amazonaws.com/gung_ho/gung_ho_logo.png",
+            "icon": "https://raw.githubusercontent.com/nisargdongare/ListDesign/main/src/logo/logo2.svg",
             "brand_partner": "TRUE"
         },
         {
@@ -401,7 +401,7 @@
             "amount": 903,
             "currency": "GBP",
             "created_at": "2019-12-31 05:34",
-            "icon": "https://novus-app-styleguide.s3.eu-west-1.amazonaws.com/banking_icons/transaction_small.svg",
+            "icon": "https://raw.githubusercontent.com/nisargdongare/ListDesign/main/src/logo/logo3.svg",
             "brand_partner": ""
         },
         {
@@ -414,7 +414,7 @@
             "amount": 15000,
             "currency": "GBP",
             "created_at": "2019-12-30 15:34",
-            "icon": "https://novus-app-styleguide.s3.eu-west-1.amazonaws.com/banking_icons/transaction_small.svg",
+            "icon": "https://raw.githubusercontent.com/nisargdongare/ListDesign/main/src/logo/logo4.svg",
             "brand_partner": ""
         }
     ]
