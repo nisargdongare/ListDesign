@@ -5,7 +5,7 @@
             "amount": 2195,
             "currency": "GBP",
             "created_at": "2021-04-22 02:15",
-            "icon": "https://novus-app-styleguide.s3.eu-west-1.amazonaws.com/banking_icons/education_small.svg",
+            "icon": "",
             "carbon_footprint": 25,
 
             "status": "completed",
