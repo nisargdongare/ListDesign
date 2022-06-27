@@ -1,13 +1,14 @@
 import React from 'react'
 import { Text, View, StyleSheet } from 'react-native';
-import { primayColor } from '../styleList';
+import { primayColor, whiteShadeColor1, whiteShadeColor2, darkShadeColor1, darkShadeColor2 } from '../styleList';
 
 type StatusProp = {
     name: String,
     amount: number,
-    currency:String,
-    time :String,
-    date: String
+    currency: String,
+    time: String,
+    date: String,
+    status: String
 
 }
 
@@ -15,14 +16,26 @@ function ShortCard(props: StatusProp) {
     return (
         <View style={styles.Container}>
             <View style={styles.LeftContainer}>
-                <View style = {{height:'50%', display: 'flex', flexDirection:'row', justifyContent:'center', alignItems:'center'}}>
+                <View style={{ height: '50%', display: 'flex', flexDirection: 'row', justifyContent: 'center', alignItems: 'center' }}>
                     <Text style={styles.BrightText1} >{props.currency}</Text>
                     <Text style={styles.BrightText1} >{props.amount}</Text>
                 </View>
                 <Text style={styles.BrightText2} >{props.time}</Text>
                 <Text style={styles.BrightText3} >{props.date}</Text>
             </View>
-            <View style={styles.RightContainer}></View>
+
+            <View style={[props.status == "completed" ? { backgroundColor: 'green' } : { backgroundColor: 'red' }, styles.StripContainer]}></View>
+            <View style={styles.MidContainer}>
+                <View style={{ marginHorizontal: 15, marginTop: 20 }}>
+                    <Text style={styles.DarkText1} >{props.name}</Text>
+                </View>
+                <View style={{ width: '100%', height: '1%', backgroundColor: whiteShadeColor2, marginHorizontal: 15, marginTop: 5 }}></View>
+            </View>
+            <View style={styles.RightContainer}>
+                <View style={styles.iconContainer} >
+                    <Text style={{ color: 'white' }}>ICON</Text>
+                </View>
+            </View>
 
         </View>
     )
@@ -51,36 +64,74 @@ const styles = StyleSheet.create({
         shadowOpacity: 1.0,
         shadowOffset: { width: 20, height: 20 },
         elevation: 3,
-        display:'flex',
-        justifyContent:'center',
-        alignItems:'center'
+        display: 'flex',
+        justifyContent: 'center',
+        alignItems: 'center'
 
     },
+
+    StripContainer: {
+        height: '100%',
+        width: '1%',
+        shadowColor: 'black',
+        shadowOpacity: 1.0,
+        shadowOffset: { width: 10, height: 10 },
+        elevation: 3,
+    },
+
+    MidContainer: {
+        backgroundColor: 'white',
+        height: '100%',
+        width: '50%',
+        shadowColor: 'black',
+        shadowOpacity: 1.0,
+        shadowOffset: { width: 10, height: 10 },
+        elevation: 3,
+    },
+
     RightContainer: {
         borderTopEndRadius: 15,
         borderBottomEndRadius: 15,
         backgroundColor: 'white',
         height: '100%',
-        width: '73%',
+        width: '22%',
         shadowColor: 'black',
         shadowOpacity: 1.0,
-        shadowOffset: { width: 10, height: 10 },
-        elevation: 3,
-
+        shadowOffset: { width: 0, height: 10 },
+        display: 'flex',
+        justifyContent: 'center'
     },
+    iconContainer: {
+        backgroundColor: primayColor,
+        height: 60,
+        width: 60,
+        borderRadius: 30,
+        display: 'flex',
+        justifyContent: 'center',
+        alignItems: 'center'
+    },
+
     BrightText1: {
-        color: 'white',
+        color: whiteShadeColor1,
         fontWeight: 'bold',
         fontSize: 20,
     },
     BrightText2: {
-        color: 'white',
+        color: whiteShadeColor2,
         fontWeight: 'bold',
         fontSize: 10,
     },
     BrightText3: {
-        color: 'white',
+        color: whiteShadeColor1,
+        fontSize: 12,
+    },
+    DarkText1: {
+        color: darkShadeColor1,
         fontWeight: 'bold',
+        fontSize: 12,
+    },
+    DarkText2: {
+        color: darkShadeColor2,
         fontSize: 12,
     }
 });
