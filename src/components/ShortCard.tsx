@@ -1,6 +1,7 @@
 import React from 'react'
-import { Text, View, StyleSheet } from 'react-native';
+import { Text, View, StyleSheet, Image } from 'react-native';
 import { primayColor, whiteShadeColor1, whiteShadeColor2, darkShadeColor1, darkShadeColor2 } from '../styleList';
+import { SvgUri } from 'react-native-svg';
 
 type StatusProp = {
     name: String,
@@ -8,11 +9,13 @@ type StatusProp = {
     currency: String,
     time: String,
     date: String,
-    status: String
+    status: String,
+    logo: string,
 
 }
 
 function ShortCard(props: StatusProp) {
+    let logo = props.logo;
     return (
         <View style={styles.Container}>
             <View style={styles.LeftContainer}>
@@ -33,7 +36,7 @@ function ShortCard(props: StatusProp) {
             </View>
             <View style={styles.RightContainer}>
                 <View style={styles.iconContainer} >
-                    <Text style={{ color: 'white' }}>ICON</Text>
+                    <SvgUri width="100%" height="100%" uri={props.logo} />
                 </View>
             </View>
 
@@ -103,12 +106,12 @@ const styles = StyleSheet.create({
     },
     iconContainer: {
         backgroundColor: primayColor,
-        height: 60,
+        height: 100,
         width: 60,
-        borderRadius: 30,
-        display: 'flex',
-        justifyContent: 'center',
-        alignItems: 'center'
+        // borderRadius: 30,
+        // display: 'flex',
+        // justifyContent: 'center',
+        // alignItems: 'center'
     },
 
     BrightText1: {
