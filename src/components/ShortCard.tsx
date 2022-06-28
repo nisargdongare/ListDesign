@@ -11,14 +11,14 @@ type StatusProp = {
     time: string,
     date: string,
     status: string,
-    logo: string,
+    icon: string,
     category: string,
     carbon_footprint: number,
     fees:number,
 }
 
 function ShortCard(props: StatusProp) {
-    let logo = props.logo;
+    let icon = props.icon;
     return (
         <View style={styles.Container}>
             <View style={styles.LeftContainer}>
@@ -53,7 +53,7 @@ function ShortCard(props: StatusProp) {
             </View>
             <View style={styles.RightContainer}>
                 <View style={styles.iconContainer} >
-                    <SvgUri width="100%" height="100%" uri={props.logo} />
+                    <SvgUri width="100%" height="100%" uri={props.icon} />
                 </View>
             </View>
 

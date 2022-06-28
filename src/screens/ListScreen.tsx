@@ -1,22 +1,23 @@
 import React, { useEffect, useState } from 'react'
-import { View } from 'react-native';
+import { TouchableOpacity, View } from 'react-native';
 import { ScrollView } from 'react-native-gesture-handler';
 import HeaderBox from '../components/HeaderBox';
 import LongCard from '../components/LongCard';
 import ShortCard from '../components/ShortCard';
 import { styleList } from '../styleList';
 import { useGetClientDetails } from '../axios';
+import { GetCurrency, GetTime, GetDate } from '../CommonFunctions';
 
 const ListScreen = () => {
-
+    const [ShowDetailView, setShowDetailView] = useState(false);
     const [dataList, setDataList] = useState([{
         name: '',
         amount: 0,
         currency: '',
         time: '',
-        date: '',
+        created_at: '',
         status: '',
-        logo: '',
+        icon: '',
         category: '',
         carbon_footprint: 0,
         fees: 0,
@@ -24,13 +25,28 @@ const ListScreen = () => {
         type: '',
         brand_partner: false
     }]);
+    const [SingleData, setSingleData] = useState({
+        name: '',
+        amount: 0,
+        currency: '',
+        time: '',
+        created_at: '',
+        status: '',
+        icon: '',
+        category: '',
+        carbon_footprint: 0,
+        fees: 0,
+        visible: false,
+        type: '',
+        brand_partner: false
+    });
 
     useEffect(() => { getDetails() }, []);
     const getDetails = async () => {
         try {
             console.log("Calling...");
             let data = await useGetClientDetails();
-            console.log(data);
+            // console.log(data);
             console.log("done...");
             setDataList(data.transactions);
 
@@ -39,13 +55,10 @@ const ListScreen = () => {
         }
     }
 
-    const GetCurrency = (currency: string) => {
-        switch (currency) {
-            case 'GBP': return '£';
-            case 'USD': return '$';
-            case 'INR': return '₹';
-            default: return '';
-        }
+
+    const DetailWindow = (action: boolean, SingleUser: any) => {
+        setSingleData(SingleUser);
+        setShowDetailView(action);
     }
 
     return (
@@ -53,24 +66,39 @@ const ListScreen = () => {
             <HeaderBox title='List of Transactions' />
             <ScrollView style={{ paddingTop: 5, height: '100%' }}>
                 {dataList.map((SingleUser: any, index: number) => {
-                    let currency = GetCurrency(SingleUser.currency);
                     return (
-                        <ShortCard key={index}
-                            name={SingleUser.name}
-                            category={SingleUser.category}
-                            carbon_footprint={SingleUser.carbon_footprint}
-                            fees={SingleUser.fees}
-                            amount={SingleUser.amount}
-                            currency={currency}
-                            date={SingleUser.date}
-                            time={SingleUser.date}
-                            status={SingleUser.status}
-                            logo={SingleUser.logo} />
+                        <TouchableOpacity key={index} onPress={() => DetailWindow(true, SingleUser)} >
+                            <ShortCard key={index}
+                                name={SingleUser.name}
+                                category={SingleUser.category}
+                                carbon_footprint={SingleUser.carbon_footprint}
+                                fees={SingleUser.fees}
+                                amount={SingleUser.amount}
+                                currency={GetCurrency(SingleUser.currency)}
+                                date={GetDate(SingleUser.created_at)}
+                                time={GetTime(SingleUser.created_at)}
+                                status={SingleUser.status}
+                                icon={SingleUser.icon} />
+                        </TouchableOpacity>
                     )
                 })}
 
             </ScrollView>
-            <LongCard visible={false} name='Nisarg' brand_partner={false} type='card' category='Education' carbon_footprint={50} fees={200} amount={48} currency='$' date='2021-04-22' time='02:15' status='completed' logo="https://raw.githubusercontent.com/nisargdongare/ListDesign/main/src/logo/logo1.svg" />
+            <LongCard
+                visible={ShowDetailView} 
+                setShowDetailView={setShowDetailView} 
+                name={SingleData.name} 
+                brand_partner={SingleData.brand_partner} 
+                type={SingleData.type} 
+                category={SingleData.category} 
+                carbon_footprint={SingleData.carbon_footprint} 
+                fees={SingleData.fees} 
+                amount={SingleData.amount} 
+                currency={SingleData.currency} 
+                date={GetDate(SingleData.created_at)} 
+                time={GetTime(SingleData.created_at)} 
+                status={SingleData.status} 
+                icon={SingleData.icon} />
         </View>
     )
 }

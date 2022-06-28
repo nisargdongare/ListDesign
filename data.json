@@ -16,7 +16,7 @@
         },
         {
             "name": "Waterstones",
-            "status": "completed",
+            "status": "Pending",
             "category": "groceries",
             "carbon_footprint": 60,
             "fees": 40,
@@ -42,7 +42,7 @@
         },
         {
             "name": "Waitrose",
-            "status": "completed",
+            "status": "Pending",
             "category": "groceries",
             "carbon_footprint": 100,
             "fees": 0,
@@ -120,7 +120,7 @@
         },
         {
             "name": "H&M",
-            "status": "completed",
+            "status": "Pending",
             "category": "fashion",
             "carbon_footprint": 600,
             "fees": 1,
