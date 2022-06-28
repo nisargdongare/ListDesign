@@ -1,5 +1,5 @@
 import React from 'react'
-import { Text, View, StyleSheet,Modal } from 'react-native';
+import { Text, View, StyleSheet, Modal } from 'react-native';
 import { primayColor, whiteShadeColor1, whiteShadeColor2, darkShadeColor1, darkShadeColor2 } from '../styleList';
 import { SvgUri } from 'react-native-svg';
 
@@ -21,15 +21,15 @@ type StatusProp = {
 
 function LongCard(props: StatusProp) {
 
-    const displayBoldContent = (key: string, value: any,line:boolean= true, Color:any=darkShadeColor1,size:number=15) => {
+    const displayBoldContent = (key: string, value: any, line: boolean = true, Color: any = darkShadeColor1, size: number = 15) => {
         let UppercaseValue = (typeof value === 'string') ? value.toUpperCase() : value;
         return (
-            <View style={{ marginHorizontal: 20, marginTop:10 }}>
-                <View style={{display: 'flex', flexDirection: 'row', justifyContent: 'space-between'}}>
-                <Text style={styles.Text2} >{key.toUpperCase()}</Text>
-                <Text style={{ alignSelf: 'center', fontSize: size, fontWeight: 'bold', color: Color }} >{UppercaseValue}</Text>
+            <View style={{ marginHorizontal: 20, marginTop: 10 }}>
+                <View style={{ display: 'flex', flexDirection: 'row', justifyContent: 'space-between' }}>
+                    <Text style={styles.Text2} >{key.toUpperCase()}</Text>
+                    <Text style={{ alignSelf: 'center', fontSize: size, fontWeight: 'bold', color: Color }} >{UppercaseValue}</Text>
                 </View>
-                {line&&<Text style={styles.Text2} >_____________________________________</Text>}
+                {line && <Text style={styles.Text2} >_____________________________________</Text>}
             </View>
         )
     }
@@ -62,9 +62,9 @@ function LongCard(props: StatusProp) {
                         {displayContent('currency :', props.currency)}
                     </View>
                     {displayBoldContent('status :', props.status)}
-                    {displayBoldContent('date :', props.date+'/'+ props.time)}
+                    {displayBoldContent('date :', props.date + '/' + props.time)}
                     {displayBoldContent('transaction type :', props.type, false)}
-                    {displayBoldContent('amount :', props.currency+' '+ props.amount+'.00/--', false,'green',20)}
+                    {displayBoldContent('amount :', props.currency + ' ' + props.amount + '.00/--', false, 'green', 20)}
                 </View>
                 <View style={[{ backgroundColor: 'white', height: 5, width: '80%', shadowRadius: 15, marginHorizontal: '10%', display: 'flex', flexDirection: 'row', alignItems: 'flex-end', justifyContent: 'space-between', paddingHorizontal: '1%', }]} >
                     {[...Array(20)].map((component, index) => (<View key={index} style={{ backgroundColor: '#242424', shadowRadius: 15, width: 10, height: 5, borderTopLeftRadius: 20, borderTopRightRadius: 20 }} ></View>))
@@ -95,7 +95,7 @@ const styles = StyleSheet.create({
         backgroundColor: 'white',
         width: '80%',
         margin: '10%',
-        paddingBottom:40,
+        paddingBottom: 40,
         shadowColor: 'black',
         shadowOpacity: 1.0,
         shadowOffset: { width: 10, height: 10 },
