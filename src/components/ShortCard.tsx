@@ -2,16 +2,19 @@ import React from 'react'
 import { Text, View, StyleSheet, Image } from 'react-native';
 import { primayColor, whiteShadeColor1, whiteShadeColor2, darkShadeColor1, darkShadeColor2 } from '../styleList';
 import { SvgUri } from 'react-native-svg';
+import { Foundation } from '@expo/vector-icons';
 
 type StatusProp = {
-    name: String,
+    name: string,
     amount: number,
-    currency: String,
-    time: String,
-    date: String,
-    status: String,
+    currency: string,
+    time: string,
+    date: string,
+    status: string,
     logo: string,
-
+    category: string,
+    carbon_footprint: number,
+    fees:number,
 }
 
 function ShortCard(props: StatusProp) {
@@ -33,6 +36,20 @@ function ShortCard(props: StatusProp) {
                     <Text style={styles.DarkText1} >{props.name}</Text>
                 </View>
                 <View style={{ width: '100%', height: '1%', backgroundColor: whiteShadeColor2, marginHorizontal: 15, marginTop: 5 }}></View>
+                <View style={{ marginHorizontal: 15 }}>
+                    <Text style={styles.DarkText2} >{props.category}</Text>
+                </View>
+                <View style={{ width: '100%', height: '50%', margin: 5, display: 'flex', flexDirection: 'row' }}>
+                    <View style={{ width: '50%', height: '100%', display: 'flex', flexDirection: 'row', justifyContent: 'center', alignItems:'flex-end', paddingBottom:15 }}>
+                        <Foundation name="foot" size={35} color={darkShadeColor2} />
+                        <Text style={[styles.DarkText3, { marginLeft: 7 }]} >{props.carbon_footprint}</Text>
+                    </View>
+                    <View style={{ width: '50%', height: '100%', display: 'flex', flexDirection:'column', justifyContent: 'center', alignItems: 'center' }}>
+                    <Text style={[styles.DarkText1, { marginLeft: 7 }]} >Fees</Text>
+                    <Text style={[styles.DarkText3, { marginLeft: 7 }]} >{props.fees}</Text>
+                    </View>
+                </View>
+
             </View>
             <View style={styles.RightContainer}>
                 <View style={styles.iconContainer} >
@@ -48,7 +65,7 @@ export default ShortCard;
 
 const styles = StyleSheet.create({
     Container: {
-        height: '26%',
+        height: 150,
         width: '100%',
         display: 'flex',
         flexDirection: 'row',
@@ -75,7 +92,7 @@ const styles = StyleSheet.create({
 
     StripContainer: {
         height: '100%',
-        width: '1%',
+        width: '2%',
         shadowColor: 'black',
         shadowOpacity: 1.0,
         shadowOffset: { width: 10, height: 10 },
@@ -97,7 +114,7 @@ const styles = StyleSheet.create({
         borderBottomEndRadius: 15,
         backgroundColor: 'white',
         height: '100%',
-        width: '22%',
+        width: '21%',
         shadowColor: 'black',
         shadowOpacity: 1.0,
         shadowOffset: { width: 0, height: 10 },
@@ -107,10 +124,6 @@ const styles = StyleSheet.create({
     iconContainer: {
         height: 100,
         width: 60,
-        // borderRadius: 30,
-        // display: 'flex',
-        // justifyContent: 'center',
-        // alignItems: 'center'
     },
 
     BrightText1: {
@@ -135,5 +148,9 @@ const styles = StyleSheet.create({
     DarkText2: {
         color: darkShadeColor2,
         fontSize: 12,
+    },
+    DarkText3: {
+        color: darkShadeColor2,
+        fontSize: 20,
     }
 });
