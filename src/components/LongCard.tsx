@@ -1,8 +1,7 @@
 import React from 'react'
-import { Text, View, StyleSheet, Image, Modal } from 'react-native';
+import { Text, View, StyleSheet,Modal } from 'react-native';
 import { primayColor, whiteShadeColor1, whiteShadeColor2, darkShadeColor1, darkShadeColor2 } from '../styleList';
 import { SvgUri } from 'react-native-svg';
-import { Foundation } from '@expo/vector-icons';
 
 type StatusProp = {
     name: string,
@@ -21,13 +20,16 @@ type StatusProp = {
 }
 
 function LongCard(props: StatusProp) {
-    
-    const displayBoldContent = (key: string, value: any) => {
+
+    const displayBoldContent = (key: string, value: any,line:boolean= true, Color:any=darkShadeColor1,size:number=15) => {
         let UppercaseValue = (typeof value === 'string') ? value.toUpperCase() : value;
         return (
-            <View style={{ marginHorizontal: 20, display: 'flex', flexDirection: 'row', justifyContent: 'space-between' }}>
+            <View style={{ marginHorizontal: 20, marginTop:10 }}>
+                <View style={{display: 'flex', flexDirection: 'row', justifyContent: 'space-between'}}>
                 <Text style={styles.Text2} >{key.toUpperCase()}</Text>
-                <Text style={styles.Text2} >{UppercaseValue}</Text>
+                <Text style={{ alignSelf: 'center', fontSize: size, fontWeight: 'bold', color: Color }} >{UppercaseValue}</Text>
+                </View>
+                {line&&<Text style={styles.Text2} >_____________________________________</Text>}
             </View>
         )
     }
@@ -59,14 +61,13 @@ function LongCard(props: StatusProp) {
                         {displayContent('Fees :', props.fees)}
                         {displayContent('currency :', props.currency)}
                     </View>
-                    {displayBoldContent('currency :', props.currency)}
-                    <Text style={styles.Text1} >{props.currency}</Text>
-                    <Text style={styles.Text1} >{props.amount}</Text>
-                    <Text style={styles.Text2} >{props.time}</Text>
-                    <Text style={styles.Text2} >{props.date}</Text>
+                    {displayBoldContent('status :', props.status)}
+                    {displayBoldContent('date :', props.date+'/'+ props.time)}
+                    {displayBoldContent('transaction type :', props.type, false)}
+                    {displayBoldContent('amount :', props.currency+' '+ props.amount+'.00/--', false,'green',20)}
                 </View>
                 <View style={[{ backgroundColor: 'white', height: 5, width: '80%', shadowRadius: 15, marginHorizontal: '10%', display: 'flex', flexDirection: 'row', alignItems: 'flex-end', justifyContent: 'space-between', paddingHorizontal: '1%', }]} >
-                    {[...Array(25)].map((component, index) => (<View key={index} style={{ backgroundColor: '#242424', shadowRadius: 15, width: 10, height: 5, borderTopLeftRadius: 20, borderTopRightRadius: 20 }} ></View>))
+                    {[...Array(20)].map((component, index) => (<View key={index} style={{ backgroundColor: '#242424', shadowRadius: 15, width: 10, height: 5, borderTopLeftRadius: 20, borderTopRightRadius: 20 }} ></View>))
                     }
                 </View>
             </View>
@@ -94,6 +95,7 @@ const styles = StyleSheet.create({
         backgroundColor: 'white',
         width: '80%',
         margin: '10%',
+        paddingBottom:40,
         shadowColor: 'black',
         shadowOpacity: 1.0,
         shadowOffset: { width: 10, height: 10 },
