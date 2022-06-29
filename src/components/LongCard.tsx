@@ -1,4 +1,3 @@
-import React from 'react'
 import { Text, View, StyleSheet, Modal, TouchableOpacity } from 'react-native';
 import { whiteShadeColor2, darkShadeColor1 } from '../styleList';
 import { SvgUri } from 'react-native-svg';

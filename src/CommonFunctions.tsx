@@ -1,8 +1,6 @@
-
-import { Alert, BackHandler } from 'react-native';
 import AsyncStorage from '@react-native-async-storage/async-storage';
 
-export const GetCurrency = (currency: string) => {
+export const GetCurrency = (currency: string) => {  // give symbol of currency 
     switch (currency) {
         case 'GBP': return '£';
         case 'USD': return '$';
@@ -11,13 +9,13 @@ export const GetCurrency = (currency: string) => {
     }
 }
 
-export const GetStringSplit = (data: string, index: number) => {
+export const GetStringSplit = (data: string, index: number) => { // splits to convert  any string to array
     if (!data) { return ''; };
     let array = data.split(' ');
     return array[index];
 }
 
-export const CacheData = async (key: string, value: any) => {
+export const CacheData = async (key: string, value: any) => { // writes  the given data to AsyncStorage
     try {
         await AsyncStorage.setItem(key, JSON.stringify(value));
         return true;
@@ -28,7 +26,7 @@ export const CacheData = async (key: string, value: any) => {
     }
 }
 
-export const getCacheData = async (key: any) => {
+export const getCacheData = async (key: any) => { // reads  the given data to AsyncStorage
     return AsyncStorage.getItem(key)
         .then((req: any) => JSON.parse(req))
         .catch(error => console.log('error!'));
