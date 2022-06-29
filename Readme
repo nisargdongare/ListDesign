@@ -1,0 +1,26 @@
+The project is based on react Native (expo), node js, js, etc 
+
+A) Prerequisites & Prep Work
+    Download and install JDK (v7 or newer)
+    Download and install Node
+    Download and install Android Studio
+
+B) Create an environment variable with the Java SDK path: Windows → Search → System → Advanced System Settings → Environment variables → New  <Path - JAVA_HOME: C:\path\to\JavaSDK>
+
+C) Configure an Android Virtual Device
+    Set up Android Studio
+    Create an empty Android Studio project
+    Create an Android Virtual Device: Manage AVD → Create
+    Boot your Android Virtual Device
+
+D) Jump into Command Line
+    npm install -g react-native-cli
+    npm install --global expo-cli
+
+E) Steps to run the project:
+    1. git clone https://github.com/nisargdongare/ListDesign.git
+    2. npm install
+    3. npm test
+    4. npm start
+
+F) If you wish to export the App command - expo build:android
