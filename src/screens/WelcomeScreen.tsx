@@ -5,6 +5,7 @@ import { CacheData } from '../CommonFunctions';
 import { darkShadeColor1, primayColor, styleList, whiteShadeColor1 } from '../styleList';
 
 const WelcomeScreen = ({ navigation }: any) => {
+    
     setTimeout(async () => {
         try {
             let data = await useGetClientDetails();

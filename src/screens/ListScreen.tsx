@@ -75,8 +75,8 @@ const ListScreen = ({ navigation }: any) => {
                                 fees={SingleUser.fees}
                                 amount={SingleUser.amount}
                                 currency={GetCurrency(SingleUser.currency)}
-                                date={GetStringSplit(SingleUser.created_at, 0)}
-                                time={GetStringSplit(SingleUser.created_at, 1)}
+                                date={GetStringSplit(SingleUser.created_at,' ',0)}
+                                time={GetStringSplit(SingleUser.created_at,' ', 1)}
                                 status={SingleUser.status}
                                 icon={SingleUser.icon} />
                         </TouchableOpacity>
@@ -95,8 +95,8 @@ const ListScreen = ({ navigation }: any) => {
                 fees={SingleData.fees}
                 amount={SingleData.amount}
                 currency={SingleData.currency}
-                date={GetStringSplit(SingleData.created_at, 0)}
-                time={GetStringSplit(SingleData.created_at, 1)}
+                date={GetStringSplit(SingleData.created_at,' ', 0)}
+                time={GetStringSplit(SingleData.created_at,' ', 1)}
                 status={SingleData.status}
                 icon={SingleData.icon} />
         </View>

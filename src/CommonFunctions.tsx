@@ -11,9 +11,9 @@ export const GetCurrency = (currency: string) => {  // give symbol of currency
     }
 }
 
-export const GetStringSplit = (data: string, index: number) => { // splits to convert  any string to array
+export const GetStringSplit = (data:string='',symbol:string='', index: number=0) => { // splits to convert  any string to array
     if (!data) { return ''; };
-    let array = data.split(' ');
+    let array = data.split(symbol);
     return array[index];
 }
 
