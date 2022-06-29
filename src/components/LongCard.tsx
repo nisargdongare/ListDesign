@@ -1,27 +1,10 @@
 import React from 'react'
 import { Text, View, StyleSheet, Modal, TouchableOpacity } from 'react-native';
-import { primayColor, whiteShadeColor1, whiteShadeColor2, darkShadeColor1, darkShadeColor2 } from '../styleList';
+import { whiteShadeColor2, darkShadeColor1 } from '../styleList';
 import { SvgUri } from 'react-native-svg';
-import { GetCurrency } from '../CommonFunctions';
+import { GetCurrency, initialDataStatusProp } from '../CommonFunctions';
 
-type StatusProp = {
-    name: string,
-    amount: number,
-    currency: string,
-    time: string,
-    date: string,
-    status: string,
-    icon: string,
-    category: string,
-    carbon_footprint: number,
-    fees: number,
-    visible: boolean,
-    type: string,
-    brand_partner: boolean,
-    setShowDetailView:any
-}
-
-function LongCard(props: StatusProp) {
+function LongCard(props: initialDataStatusProp) {
 
     const displayBoldContent = (key: string, value: any, line: boolean = true, Color: any = darkShadeColor1, size: number = 15) => {
         let UppercaseValue = (typeof value === 'string') ? value.toUpperCase() : value;
@@ -47,7 +30,7 @@ function LongCard(props: StatusProp) {
     }
     return (
         <Modal transparent={true} visible={props.visible} style={{ flex: 1, justifyContent: 'center', height: '100%' }}>
-            <TouchableOpacity onPress={()=>props.setShowDetailView(false)} style={styles.Container}>
+            <TouchableOpacity onPress={() => props.setShowDetailView(false)} style={styles.Container}>
                 <View style={styles.MidContainer}>
                     <View style={styles.iconContainer} >
                         <SvgUri width="100%" height="100%" uri={props.icon} />
@@ -66,11 +49,10 @@ function LongCard(props: StatusProp) {
                     {displayBoldContent('status :', props.status)}
                     {displayBoldContent('date :', props.date + '/' + props.time)}
                     {displayBoldContent('transaction type :', props.type, false)}
-                    {displayBoldContent('amount :', GetCurrency(props.currency) + ' ' + props.amount + '.00/--', false, 'green', 20)}
+                    {displayBoldContent('amount :', GetCurrency(props.currency) + ' ' + props.amount + '.00/--', false, props.status == 'completed' ? 'green' : 'red', 20)}
                 </View>
                 <View style={[{ backgroundColor: 'white', height: 5, width: '80%', shadowRadius: 15, marginHorizontal: '10%', display: 'flex', flexDirection: 'row', alignItems: 'flex-end', justifyContent: 'space-between', paddingHorizontal: '1%', }]} >
-                    {[...Array(20)].map((component, index) => (<View key={index} style={{ backgroundColor: '#242424', shadowRadius: 15, width: 10, height: 5, borderTopLeftRadius: 20, borderTopRightRadius: 20 }} ></View>))
-                    }
+                    {[...Array(20)].map((component, index) => (<View key={index} style={{ backgroundColor: '#242424', shadowRadius: 15, width: 10, height: 5, borderTopLeftRadius: 20, borderTopRightRadius: 20 }} ></View>))}
                 </View>
             </TouchableOpacity>
 
@@ -106,8 +88,6 @@ const styles = StyleSheet.create({
         borderTopLeftRadius: 5,
         borderTopRightRadius: 5,
     },
-
-
     iconContainer: {
         height: 100,
         width: '100%',

@@ -1,26 +1,16 @@
 import React from 'react'
-import { Text, View, StyleSheet, Image } from 'react-native';
+import { Text, View, StyleSheet } from 'react-native';
 import { primayColor, whiteShadeColor1, whiteShadeColor2, darkShadeColor1, darkShadeColor2 } from '../styleList';
 import { SvgUri } from 'react-native-svg';
 import { Foundation } from '@expo/vector-icons';
+import { initialDataStatusProp } from '../CommonFunctions';
 
-type StatusProp = {
-    name: string,
-    amount: number,
-    currency: string,
-    time: string,
-    date: string,
-    status: string,
-    icon: string,
-    category: string,
-    carbon_footprint: number,
-    fees:number,
-}
 
-function ShortCard(props: StatusProp) {
-    let icon = props.icon;
+function ShortCard(props: initialDataStatusProp) {
+
     return (
         <View style={styles.Container}>
+
             <View style={styles.LeftContainer}>
                 <View style={{ height: '50%', display: 'flex', flexDirection: 'row', justifyContent: 'center', alignItems: 'center' }}>
                     <Text style={styles.BrightText1} >{props.currency}</Text>
@@ -49,8 +39,8 @@ function ShortCard(props: StatusProp) {
                     <Text style={[styles.DarkText3, { marginLeft: 7 }]} >{props.fees}</Text>
                     </View>
                 </View>
-
             </View>
+
             <View style={styles.RightContainer}>
                 <View style={styles.iconContainer} >
                     <SvgUri width="100%" height="100%" uri={props.icon} />

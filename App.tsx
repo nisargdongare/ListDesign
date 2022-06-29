@@ -10,8 +10,8 @@ const App = () => {
   return (
     <NavigationContainer>
       <Stack.Navigator screenOptions={{  headerShown: false }}>
-      <Stack.Screen name="ListScreen" component={ListScreen} />
         <Stack.Screen name="WelcomeScreen" component={WelcomeScreen} />
+        <Stack.Screen name="ListScreen" component={ListScreen} />
       </Stack.Navigator>
     </NavigationContainer>
   );
