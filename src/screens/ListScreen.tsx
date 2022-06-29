@@ -51,7 +51,7 @@ const ListScreen = ({ navigation }: any) => {
     }
 
 
-    const DetailWindow = (action: boolean, SingleUser: any) => { // passes data of selected card to detail card and allows to show it
+    const DetailWindow = (action: boolean=false, SingleUser: any='') => { // passes data of selected card to detail card and allows to show it
         setSingleData(SingleUser);
         setShowDetailView(action);
     }

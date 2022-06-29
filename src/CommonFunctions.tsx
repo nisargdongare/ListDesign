@@ -1,4 +1,6 @@
 import AsyncStorage from '@react-native-async-storage/async-storage';
+// import AsyncStorage from '@react-native-async-storage/async-storage/jest/async-storage-mock';
+// import { AsyncStorage } from 'react-native';
 
 export const GetCurrency = (currency: string) => {  // give symbol of currency 
     switch (currency) {
